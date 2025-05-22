@@ -1,0 +1,2717 @@
+/* add font family */
+@font-face {
+  font-family: "msc-poppins-midim-font";
+  src: url("../font/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "msc-poppins-regular-font";
+  src: url("../font/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Tagesschrift';
+  src: url('../font/Tagesschrift/Tagesschrift-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "msc-heading-font";
+  src: url("../font/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "msc-poppins-regular-font", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 111px;
+  z-index: 1000;
+  position: relative;
+}
+
+.msc-agrotech-top-header {
+  background-color: #1c4435;
+  color: white;
+}
+
+.msc-top-header-wrapper {
+  padding: 10px 0;
+}
+
+.msc-agrotech-header-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.msc-agrotech-header-top-left,
+.msc-agrotech-header-top-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.msc-agrotech-header-top-left span {
+  font-size: 12px;
+}
+
+.msc-agrotech-header-main-nav {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.msc-agrotech-header-logo-wrapper img {
+  width: 120px;
+  margin-right: 0.8rem;
+}
+
+.msc-agrotech-header-navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.msc-agrotech-header-navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+}
+
+.msc-agrotech-header-navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  font-family: 'Nunito';
+  font-size: 16px;
+  color: #1c4435;
+  font-weight: normal;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+/* Hover underline */
+.msc-agrotech-header-navbar ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: orange;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.msc-agrotech-header-navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.msc-agrotech-header-navbar ul li a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+
+
+
+
+.msc-agrotech-header-talk-btn {
+  background-color: #1c4435;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.msc-mobile-toggle {
+  display: none;
+  font-size: 24px;
+  color: #1c4435;
+  cursor: pointer;
+  padding-left: 10px;
+
+}
+
+
+
+/*=================== header section ======================== */
+
+/* Hero secttion */
+.msc-agrotech-carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.msc-agrotech-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.msc-agrotech-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.msc-agrotech-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-blend-mode: overlay;
+  background-color: rgba(35, 37, 35, 0.9);
+}
+
+.msc-agrotech-hero-content {
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.msc-agrotech-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.msc-agrotech-hero-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.msc-agrotech-hero-btn {
+  background-color: #d18800;
+  color: white;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 40px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+
+.msc-agrotech-hero-btn:hover {
+  background-color: #145b40;
+}
+
+.msc-agrotech-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.msc-agrotech-nav.prev {
+  left: 10px;
+}
+
+.msc-agrotech-nav.next {
+  right: 10px;
+}
+
+
+
+
+
+/*  ================================ ABOUT US =======================================*/
+
+.msc-agrotech-about-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 3px solid #00b6b6;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.msc-agrotech-about-breadcrumb {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+.msc-agrotech-about-breadcrumb a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.msc-agrotech-about-breadcrumb a:hover {
+  color: #00b6b6;
+  text-decoration: underline;
+}
+
+.msc-agrotech-about-breadcrumb i {
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+/* other secton */
+.msc-agrotech-about {
+  background-color: #ffffff;
+  position: relative;
+  color: black;
+  margin-top: 2rem;
+}
+
+.msc-agrotech-about .msc-agrotech-about-container {
+  position: relative;
+  z-index: 1;
+}
+
+.msc-agrotech-about .msc-agrotech-about-subtitle {
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #2c662d;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.msc-agrotech-about .msc-agrotech-about-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+}
+
+.msc-agrotech-about .msc-agrotech-about-highlight span:nth-child(1) {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.msc-agrotech-about .msc-agrotech-about-highlight span:nth-child(2) {
+  font-weight: bold;
+  background: linear-gradient(to right, #4dc742, #4b1413);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.msc-agrotech-about .msc-agrotech-about-highlight span:nth-child(3) {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.msc-agrotech-about .msc-agrotech-about-blog-card {
+  max-width: 200px;
+  position: relative;
+}
+
+.msc-agrotech-about .msc-agrotech-about-badge-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.msc-agrotech-about .msc-agrotech-about-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: #2c662d;
+  color: white;
+}
+
+.msc-agrotech-about .msc-agrotech-about-avatars img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  margin-right: -10px;
+}
+
+.msc-agrotech-about .msc-agrotech-about-btn i {
+  font-size: 20px;
+}
+
+.msc-agrotech-about-head-title {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "msc-poppins-midim-font";
+}
+
+.msc-agrotech-about-head-sub-title {
+  font-size: 13px;
+  font-family: "msc-poppins-midim-font";
+}
+
+/* for all heading */
+.msc-agrotech-title-heading-all {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-family: "msc-heading-font";
+
+}
+
+.msc-agrotech-title-heading-all::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 50%;
+  background-color: orange;
+  transition: width 0.4s ease;
+}
+
+.msc-agrotech-title-heading-all:hover::after {
+  width: 100%;
+}
+
+/*  ==================================== SERVICES ======================================= */
+
+
+.msc-agrotech-services-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+}
+
+.msc-agrotech-services-card {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+  /* Smooth hover effect */
+  box-shadow: 0 -2px 0 red;
+  /* Red top border outside */
+}
+
+
+.msc-agrotech-services-card img {
+  border-radius: 0.75rem;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  filter: brightness(0.7);
+}
+
+.msc-agrotech-services-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.msc-agrotech-services-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  z-index: 0;
+}
+
+.msc-agrotech-services-card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+
+
+.msc-agrotech-services-card-description {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  z-index: 2;
+  transition: bottom 0.9s ease;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Hover Effects */
+.msc-agrotech-services-card:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.msc-agrotech-services-card:hover .msc-agrotech-services-card-description {
+  bottom: 0;
+}
+
+.msc-agrotech-services-card:hover .msc-agrotech-services-card-title {
+  opacity: 0;
+}
+
+.msc-agrotech-services-btn {
+  display: block;
+  text-align: center;
+  margin: 2rem auto 0;
+}
+
+.msc-agrotech-services-button {
+  color: white;
+  background-color: rgb(33, 58, 33);
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+
+.msc-agrotech-services-button:hover {
+  color: white;
+  background-color: #0e1c0d;
+  transition: all 0.4s ease-in-out;
+}
+
+/* serv card */
+.msc-agrotech-services-card-design-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.msc-agrotech-services-card-design-card {
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+  /* Changed from flex-start */
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #b1e3ac29;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #164117;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.msc-agrotech-services-card-design-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.msc-agrotech-services-card-design-card img {
+  width: 150px;
+  height: auto;
+  align-self: stretch;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.msc-agrotech-services-card-design-content {
+  flex-grow: 1;
+}
+
+.msc-agrotech-services-card-design-category {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #11271bca;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.msc-agrotech-services-card-design-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.msc-agrotech-services-card-design-subtitle {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.msc-agrotech-services-card-design-meta {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.msc-agrotech-services-card-design-meta ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.msc-agrotech-services-card-design-meta ul li {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.msc-agrotech-services-card-design-highlight {
+  border: 2px solid #164117;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.msc-agrotech-services-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #164117;
+}
+
+
+/* ===========================FAQ SECTION --------------------- */
+.msc-agrotech-faq-wrapper {
+  margin-top: 2rem;
+}
+
+
+.polyhouse-faq-equal-height {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.msc-agrotech-faq-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.msc-agrotech-faq-subheading {
+  text-align: left;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.msc-agrotech-faq .accordion-button {
+  border-radius: 2rem !important;
+  background-color: #ffffff;
+  box-shadow: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.msc-agrotech-faq .accordion-item {
+  border: none;
+  padding: 6px;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.msc-agrotech-faq .accordion-item.green-border {
+  border: 2px solid #28a745;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
+}
+
+.msc-agrotech-faq .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l6 6 6-6'/%3E%3C/svg%3E");
+  transition: transform 0.3s ease;
+}
+
+.msc-agrotech-faq .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.accordion-collapse {
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+.accordion-body {
+  transition: opacity 0.4s ease;
+}
+
+/* cotact page */
+.polyhouse-faq-form-container {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 560px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.polyhouse-faq-form-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.polyhouse-faq-form input,
+.polyhouse-faq-form textarea {
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.polyhouse-faq-form button {
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  background-color: #1c4435;
+  color: #f8f9fa;
+  border: none;
+}
+
+.polyhouse-faq-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.polyhouse-faq-form input:focus,
+.polyhouse-faq-form textarea:focus {
+  box-shadow: none !important;
+  border: 2px solid red !important;
+  outline: none;
+}
+
+/* ====================tesmonila=================== */
+.msc-agrotech-tesmonilal-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.msc-agrotech-tesmonilal-quote {
+  font-size: 3rem;
+  color: #1c4435;
+}
+
+.msc-agrotech-tesmonilal-text {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.6;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.msc-agrotech-tesmonilal-author {
+  font-size: 0.9rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.owl-nav {
+  display: none;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.msc-client-wrpper-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.msc-agrotech-client-img {
+  width: 100%;
+  height: 100%;
+  object-position: top center;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+.svg:not(:host).svg-inline--fa,
+svg:not(:root).svg-inline--fa {
+  color: #014421;
+}
+
+/* ===========================Footer section start========================= */
+.msc-agrotech-footer {
+  position: relative;
+  background-color: #b1c7bc8a;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px 20px;
+  overflow: hidden;
+}
+
+
+.msc-agrotech-footer * {
+  position: relative;
+  z-index: 1;
+}
+
+.msc-agrotech-footer h5 {
+  color: #014421;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.msc-agrotech-footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.msc-agrotech-footer__link {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.msc-agrotech-footer__link:hover {
+  color: #014421;
+  text-decoration: underline;
+}
+
+.msc-agrotech-footer a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.msc-agrotech-footer a:hover {
+  color: #016933;
+}
+
+.msc-agrotech-footer i {
+  color: #014421;
+}
+
+.msc-agrotech-footer i:hover {
+  transform: scale(1.1);
+  color: #016933;
+}
+
+.msc-agrotech-footer .btn-primary {
+  background-color: #014421;
+  border: none;
+}
+
+.msc-agrotech-footer .btn-primary:hover {
+  background-color: #016933;
+}
+
+.msc-agrotech-footer__logo img {
+  max-height: 60px;
+  width: auto;
+}
+
+.msc-agrotech-footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.msc-agrotech-footer .form-control {
+  box-shadow: none !important;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+.msc-agrotech-footer .form-control:focus {
+  border-color: #014421;
+  box-shadow: none;
+}
+
+.msc-agrotech-footer__subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.msc-agrotech-footer__subscribe-form input {
+  flex: 1;
+  min-width: 0;
+}
+
+.msc-agrotech-footer small {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.msc-footer-conteact-deisng {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+
+/* ============All Banner Section =================== */
+
+.msc-agrotech-about-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.708);
+  z-index: 1;
+}
+
+.msc-agrotech-about-banner .msc-agrotech-about-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.msc-agrotech-about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.msc-agrotech-about-breadcrumb {
+  font-size: 1.25rem;
+  color: #f9a825;
+}
+
+
+
+
+/*=====================About us  */
+.msc-agrotech-about-banner {
+  background-image: url('../img/about-bg1.jpg');
+  /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* hero section */
+.msc-agrotech-about-hero-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.msc-agrotech-about-hero-subtitle {
+  color: #f4a025;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.msc-agrotech-about-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.msc-agrotech-about-hero-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.msc-agrotech-about-hero-author {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.msc-agrotech-about-hero-author img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.msc-agrotech-about-hero-image-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.msc-agrotech-about-hero-image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+}
+
+.msc-agrotech-about-hero-badge {
+  background-color: #4caf50;
+  color: #fff;
+  border: 8px solid white;
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  bottom: 30%;
+  right: -20px;
+}
+
+.msc-agrotech-about-hero-badge span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* other hero */
+.msc-agrotech-other-hero-section {
+  padding: 60px 15px;
+  background-color: #f8f9fa;
+}
+
+.msc-agrotech-other-hero-badge {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.msc-agrotech-other-hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.msc-agrotech-other-hero-description {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.msc-agrotech-other-hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.msc-agrotech-other-hero-feature img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.msc-agrotech-other-hero-list {
+  margin: 15px 0;
+}
+
+.msc-agrotech-other-hero-list li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.msc-agrotech-other-hero-list li::before {
+  content: "🌿";
+  margin-right: 8px;
+  color: #28a745;
+}
+
+.msc-agrotech-other-hero-btn {
+  border: 1px solid #28a745;
+  color: #28a745;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.msc-agrotech-other-hero-btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.msc-agrotech-other-hero-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  margin-top: 20px;
+}
+
+.msc-agrotech-other-hero-img {
+  width: 100%;
+  height: 100%;
+}
+
+.msc-agrotech-other-hero-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.msc-agrotech-other-hero-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.agrotech-btn {
+  padding-top: 1rem;
+}
+
+.msc-agrotec-contect-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+/* Meat team */
+.msc-agrotech-our-team-main-section {
+  width: 100%;
+}
+
+.msc-agrotech-our-team-wrapper {
+  background-color: #1b411a;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px 20px;
+  padding: 40px 20px;
+}
+
+.msc-heading {
+  margin-bottom: 3rem;
+}
+
+.msc-agrotech-our-team-badge {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #14532d;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 9999px;
+  box-shadow: 4px 4px 0 #0f2911;
+  transform: rotate(-5deg);
+  margin-bottom: 20px;
+}
+
+.msc-agrotech-our-team-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+.msc-agrotech-our-team-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #f0fdf4;
+  text-align: center;
+}
+
+.msc-agrotech-our-team-card:hover {
+  transform: translateY(-5px);
+}
+
+.msc-agrotech-our-team-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.msc-agrotech-our-team-name {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #14532d;
+  margin-top: 10px;
+}
+
+.msc-agrotech-our-team-role {
+  color: #4d7c0f;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/*achivent section  */
+.msc-agrotech-achivent-section {
+  position: relative;
+  background-image: url('../img/achievement-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 20px;
+  z-index: 1;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.msc-agrotech-achivent-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.msc-agrotech-achivent-heading {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+.msc-agrotech-achivent-subheading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: center;
+}
+
+.msc-agrotech-achivent-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msc-agrotech-achivent-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.msc-agrotech-achivent-number {
+  color: #00ff5e;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+}
+
+.msc-agrotech-achivent-divider {
+  border-left: 2px solid rgba(255, 255, 255, 0.475);
+  height: 80px;
+  margin: auto;
+}
+
+
+/* ===================================================services ==========================*/
+.msc-agrotech-about-banner {
+  background-image: url('../img/about-bg1.jpg');
+  /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* banner */
+.msc-agrotech-services-hero {
+  border-radius: 12px;
+  position: relative;
+  padding: 20px;
+  margin-top: 4rem;
+}
+
+.msc-left-agrotech-services-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.msc-agrotech-services-hero-subtitle {
+  color: #f76c1b;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.msc-agrotech-services-hero-title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.msc-agrotech-services-hero-description {
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.msc-agrotech-services-hero-progress p {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.msc-agrotech-services-hero-btn {
+  background-color: #f76c1b;
+  color: white;
+  border: none;
+}
+
+.msc-agrotech-services-hero-btn:hover {
+  background-color: #e85c0c;
+}
+
+.msc-agrotech-services-hero-card {
+  position: absolute;
+  top: 45%;
+  right: -10%;
+  max-width: 300px;
+  text-align: center;
+  border-left: 5px solid green;
+}
+
+.msc-agrotech-services-hero-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.msc-agrotech-services-hero-card-text {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.msc-right-services-hero-section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.msc-right-services-hero-section img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.msc-left-agrotech-services {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+
+
+/* other servicew */
+.msc-services-section {
+  background-color: #fff;
+}
+
+.msc-section-title {
+  margin-bottom: 30px;
+}
+
+.msc-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.msc-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.msc-service-item:hover {
+  background-color: #f0fff0;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.msc-service-item {
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.msc-service-item img.msc-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  padding: 8px;
+}
+
+.msc-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.msc-description {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.full-height-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+
+
+/* why choose us */
+.msc-agrotech-why-choose {
+  margin-top: 4rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.msc-agrotech-why-choose-wrapper {
+  background-color: #f5fef3;
+  padding: 40px 0;
+  margin: 0 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.msc-agrotech-why-choose .image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-left: 20px;
+  height: 100%;
+}
+
+.msc-agrotech-why-choose .image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a4d39c;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.msc-agrotech-why-choose .image-wrapper img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.msc-agrotech-why-choose .section-subtitle {
+  color: #4caf50;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.msc-agrotech-why-choose .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a3b1a;
+  margin-bottom: 15px;
+}
+
+.msc-agrotech-why-choose .section-description {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 35px;
+}
+
+.msc-agrotech-why-choose .feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.msc-agrotech-why-choose .feature-box .icon {
+  width: 52px;
+  height: 52px;
+  background-color: #e2f6dc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #3e8b3e;
+  flex-shrink: 0;
+}
+
+.msc-agrotech-why-choose .feature-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.msc-agrotech-why-choose .feature-desc {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Placeholder icons */
+.icon-leaf::before {
+  content: "🌿";
+}
+
+.icon-team::before {
+  content: "👨‍🌾";
+}
+
+.icon-energy::before {
+  content: "🔋";
+}
+
+.icon-support::before {
+  content: "📞";
+}
+
+.msc-why-img-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+/* ========================================gallery==================== */
+.msc-agrotech-about-banner {
+  background-image: url('../img/about-bg.jpg');
+  /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* banner */
+.msc-agrotech-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.msc-agrotech-heading {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.msc-agrotech-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.msc-agrotech-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.msc-agrotech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.msc-agrotech-tag {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.msc-agrotech-tag:hover,
+.msc-agrotech-tag.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.msc-agrotech-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+
+.msc-agrotech-card {
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.4s, z-index 0.3s;
+}
+
+.msc-agrotech-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.msc-agrotech-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  z-index: 10;
+}
+
+.msc-agrotech-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.56));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+}
+
+.msc-agrotech-label {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+}
+
+
+/* ===============================contact us */
+
+.msc-agrotech-about-banner {
+  background-image: url('../img/contact-us.jpg');
+  /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* Banner */
+.msc-agrotech-contactUs-page-container {
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+.msc-agrotech-contactUs-page-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.msc-agrotech-contactUs-page-item i {
+  font-size: 20px;
+  color: #014421;
+  margin-right: 15px;
+  width: 25px;
+  text-align: center;
+}
+
+.msc-agrotech-contactUs-page-text {
+  color: #555;
+  font-size: 16px;
+}
+
+.msc-agrotech-faq-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.msc-agrotech-contactUs-page-wrapper {
+  background-color: #f8f9fa;
+}
+
+.msc-agrotech-contactUs-page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.msc-agrotech-contactUs-page-subtitle {
+  font-size: 1rem;
+  color: #333;
+}
+
+.msc-agrotech-contactUs-page-text {
+  color: #6c757d;
+}
+
+.msc-agrotech-contactUs-page-social a {
+  color: #1c4435;
+  transition: color 0.3s ease;
+  background-color: #ffefec;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+}
+
+.msc-agrotech-contactUs-page-social a:hover {
+  background-color: #1c4435;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.polyhouse-faq-form-container {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.polyhouse-faq-form-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.polyhouse-faq-form input,
+.polyhouse-faq-form textarea {
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.polyhouse-faq-form button {
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  background-color: #1c4435;
+  color: #f8f9fa;
+  border: none;
+}
+
+.polyhouse-faq-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.polyhouse-faq-form input:focus,
+.polyhouse-faq-form textarea:focus {
+  box-shadow: none !important;
+  border: 2px solid red !important;
+  outline: none;
+}
+
+.msc-agrotech-contactUs-page-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 5px;
+}
+
+.msc-agrotech-contactUs-page-social a {
+  text-decoration: none;
+}
+
+.triangle {
+  width: 100%;
+  height: 60px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  background: linear-gradient(90deg, #b1c7bc8a, #b1c7bc8a);
+}
+
+
+/* Decorative Divider Styles */
+/* ========== Polyhouse Decorative Divider ========== */
+.msc-agrotech-decor-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0 40px;
+  gap: 20px;
+}
+
+.msc-agrotech-line {
+  flex: 1;
+  height: 2px;
+  background-color: #4CAF50;
+  /* Polyhouse green */
+}
+
+.msc-agrotech-center-decor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Dots */
+/*===================== blog=============== */
+.msc-agrotech-blog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.msc-agrotech-blog-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.msc-agrotech-blog-subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* input */
+.msc-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  /* optional, adjust as needed */
+}
+
+.msc-input-wrapper input {
+  width: 100%;
+  height: 42px;
+  /* keep height consistent */
+  padding: 12px 10px 8px;
+  background-color: #e6f4ea;
+  border: none;
+  border-bottom: 2px solid #155c2f;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, border-bottom-width 0.3s ease, padding-top 0.3s ease;
+}
+
+.msc-input-wrapper label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #4b7256;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: #e6f4ea;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+.msc-input-wrapper input::placeholder {
+  color: transparent;
+}
+
+.msc-input-wrapper input:focus+label,
+.msc-input-wrapper input:not(:placeholder-shown)+label {
+  top: 0;
+  font-size: 0.8rem;
+  color: #2e7d32;
+  border-radius: 3px;
+}
+
+.msc-input-wrapper input:focus {
+  border: 2px solid #2e7d32;
+  padding-top: 18px;
+}
+
+/* clickable blog card links */
+.msc-agrotech-blog-news-card-link {
+  display: block;
+  color: inherit;
+  /* keep text color */
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.msc-agrotech-blog-news-card-link:hover {
+  transform: translateY(-4px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.msc-agrotech-side-news-link {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 12px;
+}
+
+.msc-agrotech-side-news-link:hover {
+  background-color: #f0f9f4;
+  /* subtle hover background */
+  text-decoration: none;
+  color: inherit;
+}
+
+.msc-agrotech-side-news-link img {
+  border-radius: 12px 0 0 12px;
+  flex-shrink: 0;
+}
+
+.msc-agrotech-side-news-link>div {
+  flex-grow: 1;
+}
+
+/* end */
+.msc-agrotech-blog-news-section {
+  padding: 60px 0;
+}
+
+.msc-agrotech-blog-news-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+/* hover removed here because handled by link hover */
+/* .msc-agrotech-blog-news-card:hover {
+      transform: translateY(-4px);
+    } */
+
+.msc-agrotech-blog-main-news img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+}
+
+.msc-agrotech-blog-news-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.msc-agrotech-blog-news-meta {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.side-news {
+  align-items: stretch !important;
+  min-height: 120px;
+}
+
+.side-news img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+.side-news .msc-agrotech-blog-news-title {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.msc-agrotech-right-side-scrollable {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-top: 1rem;
+}
+
+.msc-agrotech-blog-main-news {
+  max-height: 320px;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+.msc-agrotech-right-side-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.msc-agrotech-right-side-scrollable::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+  border-radius: 3px;
+}
+
+.msc-agrotech-right-side-scrollable::-webkit-scrollbar-track {
+  background-color: #e0f2f1;
+  border-radius: 3px;
+}
+
+.msc-agrotech-right-side-scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #193b1a #e0f2f1;
+}
+
+/* ===============flower */
+.msc-agrotech-work-details-section {
+  padding: 60px 15px;
+  background-color: #fff;
+}
+
+.msc-agrotech-work-details-badge {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.msc-agrotech-work-details-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.msc-agrotech-work-details-description {
+  color: #242222cd;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.msc-agrotech-work-details-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.msc-agrotech-work-details-feature img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.msc-agrotech-work-details-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.msc-agrotech-work-details-img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.msc-agrotech-work-details-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.msc-agrotech-work-details-size-detiols {
+  display: flex;
+  gap: 2rem;
+}
+
+.msc-agrotech-work-details-size-detiols span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.msc-agrotech-client-wrapper {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.msc-agrotech-work-details-client-details {
+  display: flex;
+}
+
+.msc-agrotech-work-details-client-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.msc-agrotech-work-details-location span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.msc-agrotech-work-details {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.msc-agrotech-icon {
+  color: #125e25;
+  margin-right: 8px;
+}
+
+/* project gallery */
+.msc-poly-house-wrpper {
+  position: relative;
+  background: linear-gradient(-180deg, rgba(11, 45, 17, 0.9), rgba(46, 89, 67, 0.651), rgba(177, 219, 198, 0.4)),
+    url('../assets/img/work8.avif') no-repeat center center/cover;
+
+  border-radius: 15px;
+  padding: 30px 0;
+  margin: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.msc-polyhouse-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.msc-polyhouse-subtitle {
+  font-size: 1rem;
+  color: #e0f5e8;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.owl-carousel .item {
+  margin: 5px;
+  height: 300px;
+}
+
+.msc-item-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.msc-item-wrapper:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.msc-polyhouse-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.msc-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(23, 52, 29, 0.95), rgba(42, 93, 52, 0.2));
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 15px;
+}
+
+.msc-caption-text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  user-select: none;
+}
+
+.msc-agrotech-carousel-wrapper {
+  width: 100%;
+  height: 400px;
+  /* Set your desired height */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.msc-agrotech-carousel .msc-agrotech-work-details-img-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.msc-agrotech-carousel .msc-agrotech-work-details-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Arrow Buttons */
+.msc-agrotech-carousel-prev,
+.msc-agrotech-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.msc-agrotech-carousel-prev {
+  left: 10px;
+}
+
+.msc-agrotech-carousel-next {
+  right: 10px;
+}
+
+.msc-agrotech-carousel-prev:hover,
+.msc-agrotech-carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ===========work ===========*/
+
+.msc-agrotech-my-work-title {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.msc-agrotech-my-work-filter-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.msc-agrotech-my-work-filter-section button {
+  background-color: rgb(29, 79, 29);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.msc-agrotech-my-work-filter-section button:hover {
+  background-color: rgb(23, 60, 23);
+}
+
+.msc-agrotech-my-work-card {
+  background: #f5fef3;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(100, 156, 102, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.msc-agrotech-my-work-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.msc-agrotech-my-work-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.msc-agrotech-my-work-card p {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.msc-agrotech-my-work-card button {
+  background: rgb(29, 79, 29);
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.3s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.msc-agrotech-my-work-card button:hover {
+  background: green;
+}
+
+/* ===========================Responsive all screen======================================== */
+
+@media (max-width: 768px) {
+  .msc-agrotech-my-work-card h3 {
+    font-size: 1rem !important;
+  }
+
+  .msc-agrotech-my-work-card p {
+    font-size: 0.75rem !important;
+  }
+
+  .msc-agrotech-my-work-card {
+    padding: 10px !important;
+  }
+
+  .msc-project-main {
+    padding: 0 5px !important;
+  }
+
+  /*=========== works ==============*/
+  .msc-agrotech-work-details-title {
+    font-size: 1.5rem;
+  }
+
+  .msc-agrotech-work-details-img {
+    margin-bottom: 20px;
+  }
+
+  .msc-agrotech-work-details-info {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .msc-agrotech-work-details-client-details {
+    text-align: left;
+  }
+
+  .msc-polyhouse-title {
+    font-size: 1.8rem;
+  }
+
+  .msc-polyhouse-subtitle {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+
+  .owl-carousel .item {
+    height: 240px;
+  }
+
+  .msc-caption-text {
+    font-size: 0.9rem;
+  }
+
+  .msc-poly-house-wrpper {
+    margin: 1rem !important;
+  }
+
+  /* =============flowrer============ */
+
+  .msc-agrotech-blog-main-news img {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .msc-agrotech-blog-news-card {
+    flex-direction: column;
+  }
+
+  .side-news {
+    flex-direction: column;
+    align-items: start !important;
+  }
+
+  .side-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .msc-agrotech-right-side-scrollable {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  /* ============Blog============== */
+  .msc-agrotech-contactUs-page-item i {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .msc-agrotech-contactUs-page-text {
+    font-size: 15px;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* ==============galllery */
+  .msc-agrotech-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .msc-agrotech-container {
+    padding: 10px !important;
+  }
+
+  .msc-agrotech-card {
+    height: 200px !important;
+  }
+
+  /* ===============service */
+  .msc-service-item {
+    flex-direction: row !important;
+    text-align: left;
+  }
+
+  .msc-heading {
+    font-size: 1.5rem;
+  }
+
+  .msc-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .msc-agrotech-why-choose .section-title {
+    font-size: 1.5rem;
+  }
+
+  .msc-agrotech-services-hero-title {
+    font-size: 2rem !important;
+  }
+
+  .msc-right-services-hero-section {
+    height: 60% !important;
+  }
+
+  .msc-agrotech-services-hero-card {
+    position: relative;
+    right: -14%;
+    top: -40%;
+    margin: auto;
+    width: 70% !important;
+    height: auto;
+    max-width: 70%;
+  }
+
+  /* About page */
+  .msc-agrotech-our-team-title {
+    font-size: 2.5rem;
+  }
+
+  .msc-agrotech-about-hero-badge {
+    width: 100px;
+    height: 100px;
+    font-size: 1.3rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  .msc-agrotech-about-hero-badge span {
+    font-size: 0.7rem;
+  }
+
+  .msc-agrotech-other-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .msc-agrotech-other-hero-img {
+    margin-bottom: 20px;
+  }
+
+  .msc-agrotec-contect-info {
+    gap: 0.4rem !important;
+  }
+
+  .msc-agrotec-left-other-hero {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .msc-agrotech-other-hero-list {
+    padding: 0 !important;
+  }
+
+  .msc-agrotech-our-team-img {
+    height: 260px;
+  }
+
+  .msc-agrotech-achivent-divider {
+    display: none;
+  }
+
+  .msc-agrotech-achivent-heading {
+    font-size: 1.5rem;
+  }
+
+  .msc-agrotech-achivent-subheading {
+    font-size: 1rem;
+  }
+
+  .msc-agrotech-achivent-number {
+    font-size: 1rem;
+  }
+
+  .msc-agrotech-achivent-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* about */
+  .msc-agrotech-about-hero-title {
+    font-size: 2rem;
+  }
+
+  .msc-agrotech-about-hero-text {
+    font-size: 0.95rem;
+  }
+
+  .msc-agrotech-about-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .msc-agrotech-about-hero-badge {
+    width: 110px;
+    height: 110px;
+    font-size: 1.5rem;
+    bottom: 5%;
+    right: 0;
+  }
+
+  .msc-agrotech-about-hero-badge span {
+    font-size: 0.75rem;
+  }
+
+  .msc-agrotech-about-hero-author img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .msc-agrotech-about-hero-author span {
+    font-size: 1.2rem;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .polyhouse-faq-form-container {
+    height: 610px !important;
+  }
+
+  /* faq */
+  .polyhouse-faq-equal-height {
+    padding: 10px !important;
+  }
+
+  .msc-faq {
+    font-size: 1.4rem !important;
+  }
+
+  .polyhouse-faq-image-col {
+    margin-top: 2rem;
+  }
+
+  .polyhouse-faq-equal-height {
+    display: block;
+  }
+
+  /* about */
+  .msc-agrotech-about .msc-agrotech-about-title {
+    font-size: 24px !important;
+    padding-left: 10px;
+  }
+
+  .msc-agrotech-about .msc-agrotech-about-badge-container {
+    gap: 10px !important;
+  }
+
+  .msc-agrotech-about .msc-agrotech-about-badge {
+    font-size: 10px !important;
+  }
+
+  /* crousel */
+  .msc-agrotech-carousel {
+    height: 400px;
+  }
+
+  .msc-agrotech-hero-content {
+    padding: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .msc-agrotech-hero-title {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .msc-agrotech-hero-subtitle {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+    margin: 0 2rem !important;
+  }
+
+  .msc-agrotech-hero-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    margin-top: 1rem !important;
+  }
+
+  .msc-agrotech-nav {
+    font-size: 1.2rem;
+    padding: 5px 8px;
+  }
+
+  /* header */
+  header {
+    height: 70px !important;
+    width: 100%;
+  }
+
+  .msc-top-header-wrapper,
+  .msc-agrotech-header-top-bar {
+    display: none;
+  }
+
+  .msc-mobile-toggle {
+    display: block;
+  }
+
+  .msc-agrotech-header-navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 999;
+    padding: 0 10px;
+  }
+
+  .msc-agrotech-header-navbar.open {
+    opacity: 1;
+    max-height: 500px;
+  }
+
+  .msc-agrotech-header-navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .msc-agrotech-header-right-icons {
+    display: none;
+  }
+
+  /* footers */
+  .msc-footer-conteact-deisng {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    justify-content: flex-start !important;
+  }
+}

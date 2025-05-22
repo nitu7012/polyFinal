@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MSC-Agrotech - Our Polyhouse Projects" />
+  <title>MSC-Agrotech - Our Projects</title>
+  <link rel="stylesheet" href="../assets/style/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+
+  <style>
+   
+
+    
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="msc-agrotech-header-main-nav">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap p-0">
+      <!-- Hamburger -->
+      <div class="msc-mobile-toggle">
+        <i class="fas fa-bars" id="msc-toggle-btn"></i>
+      </div>
+      <!-- Logo -->
+      <div class="msc-agrotech-header-logo-wrapper">
+        <img src="../assets/img/logo.png" alt="Logo">
+      </div>
+      <!-- Navigation Links -->
+      <nav class="msc-agrotech-header-navbar" id="msc-mobile-menu">
+        <ul>
+          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="../about/about-other.html">About Us</a></li>
+          <li><a href="../services/serves.html">Services</a></li>
+          <li><a href="../Blog/Blog.html">Blog</a></li>
+          <li><a href="../myWork/work.html">My Works</a></li>
+
+          <li><a href="../gallery/agotechGal.html">Gallery</a></li>
+          <li><a href="../contactus/contact.html">Contacts</a></li>
+
+        </ul>
+      </nav>
+      <!-- Right Button -->
+      <div class="msc-agrotech-header-right-icons">
+        <button class="msc-agrotech-header-talk-btn">Let's Talk</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- banner Section -->
+  <section class="msc-agrotech-about-banner">
+    <div class="msc-agrotech-about-overlay">
+      <h1 class="msc-agrotech-about-title">My Work</h1>
+      <p class="msc-agrotech-about-breadcrumb">
+        <a href="../index.html" class="text-warning text-decoration-none">Home</a> / My Work
+      </p>
+    </div>
+  </section>
+  <!-- my work -->
+  <div class="container my-5">
+    <h1 class="msc-agrotech-my-work-title">Our Polyhouse My Projects</h1>
+
+
+
+    <div class="row msc-top-project-wrapper" id="project-cards">
+      <div class="col-6 col-lg-4 mb-3 msc-project-main">
+        <div class="msc-agrotech-my-work-card" data-category="vegetables">
+          <img src="../assets/img/work5.avif" alt="Vegetable Project" />
+          <h3>Polyhouse for Vegetables</h3>
+          <p>Location: XYZ City | Area: 5000 sq.ft | Year: 2023</p>
+          <button onclick="viewDetails('vegetable-project.html')">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-4 mb-3 msc-project-main">
+        <div class="msc-agrotech-my-work-card" data-category="flowers">
+          <img src="../assets/img/work6.avif" alt="Flower Project" />
+          <h3>Polyhouse for Flowers</h3>
+          <p>Location: ABC City | Area: 3000 sq.ft | Year: 2022</p>
+          <button onclick="viewDetails('flower.html')">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-4 mb-3 msc-project-main">
+        <div class="msc-agrotech-my-work-card" data-category="fruits">
+          <img src="../assets/img/work7.avif" alt="Fruits Project" />
+          <h3>Polyhouse for Fruits</h3>
+          <p>Location: LMN City | Area: 4000 sq.ft | Year: 2021</p>
+          <button onclick="viewDetails('flower.html')">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-4 mb-3 msc-project-main">
+        <div class="msc-agrotech-my-work-card" data-category="hydroponics">
+          <img src="../assets/img/work1.jpg" alt="Hydroponic Setup" />
+          <h3>Hydroponic Polyhouse Setup</h3>
+          <p>Location: Pune | Area: 2500 sq.ft | Year: 2023</p>
+          <button onclick="viewDetails('flower.html')">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-4 mb-3 msc-project-main">
+        <div class="msc-agrotech-my-work-card" data-category="nursery">
+          <img src="../assets/img/work2.jpg" alt="Nursery Setup" />
+          <h3>Nursery Polyhouse Project</h3>
+          <p>Location: Nashik | Area: 2000 sq.ft | Year: 2024</p>
+          <button onclick="viewDetails('flower.html')">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-4 mb-3 msc-project-main">
+        <div class="msc-agrotech-my-work-card" data-category="nursery">
+          <img src="../assets/img/work3.jpg" alt="Net House" />
+          <h3>Net House for Nursery Plants</h3>
+          <p>Location: Sangli | Area: 1800 sq.ft | Year: 2023</p>
+          <button onclick="viewDetails('flower.html')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="triangle"></div>
+  <footer class="msc-agrotech-footer pt-5 ">
+    <div class="container">
+      <!-- Contact Info -->
+      <div class="row">
+        <div class="msc-agrotech-footer-contact"></div>
+        <div class="col-md-3 mb-3 msc-agrotech-footer__logo">
+          <div class="d-flex justify-content-start align-items-start">
+            <img src="../assets/img/tran-bg.png" alt="Polyhouse Logo">
+          </div>
+        </div>
+
+        <div class="col-md-9 mb-3">
+          <div class="d-flex justify-content-end text-end gap-5 flex-wrap">
+            <div class="msc-agrotech-footer__contact-item">
+              <i class="fas fa-phone fs-5"></i>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="msc-agrotech-footer__contact-item">
+              <i class="fas fa-envelope fs-5"></i>
+              <span>support@polyhouse.com</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+<!-- border -->
+ <div class="border-top border-secondary p-4"></div>
+
+      <!-- Links Section -->
+      <div class="row text-md-start text-start ">
+        <div class="col-md-3 mb-3">
+          <h5>About Polyhouse</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="msc-agrotech-footer__link">Our Mission</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Technology</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Team</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Partners</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Solutions</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="msc-agrotech-footer__link">Smart Farming</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Climate Control</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Hydroponics</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Consulting</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="msc-agrotech-footer__link">Blog</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">FAQs</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Terms of Use</a></li>
+            <li><a href="#" class="msc-agrotech-footer__link">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Subscribe</h5>
+          <form class="msc-agrotech-footer__subscribe-form">
+            <input type="email" class="form-control" placeholder="Enter your email" />
+            <button class="btn btn-primary">Subscribe</button>
+          </form>
+          <small class="d-block mt-2">Stay updated with the latest in agri-tech innovations and insights.</small>
+          <div class="msc-agrotech-footer__contact-item mt-2">
+            <i class="fas fa-map-marker-alt fs-5"></i>
+            <span>Plot 45, Green Valley, Pune, Maharashtra, India</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Text -->
+      <div class="text-center mt-1 pt-3 border-top border-secondary">
+        <p class="mb-0">© 2025 Polyhouse. All rights reserved. | Made with ❤ by MSOFTCODE.</p>
+        <div class="mt-2">
+          <a href="#"><i class="fab fa-twitter me-3"></i></a>
+          <a href="#"><i class="fab fa-facebook me-3"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/script/script.js"></script>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll(".msc-agrotech-my-work-card");
+      cards.forEach((card) => {
+        if (category === "all" || card.dataset.category === category) {
+          card.parentElement.style.display = "block";
+        } else {
+          card.parentElement.style.display = "none";
+        }
+      });
+    }
+
+    function viewDetails(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+
+</html>

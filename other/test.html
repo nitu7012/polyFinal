@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polyhouse Services</title>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .msc-agrotech-services-card-design-wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .msc-agrotech-services-card-design-card{
+            display: flex;
+            gap: 15px;
+            align-items: stretch;
+            /* Changed from flex-start */
+            padding: 20px 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background-color:#b1e3ac29;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #164117;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+
+          .msc-agrotech-services-card-design-card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .msc-agrotech-services-card-design-card img {
+            width: 150px;
+            height: auto;
+            align-self: stretch;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+
+        .msc-agrotech-services-card-design-content {
+            flex-grow: 1;
+        }
+
+        .msc-agrotech-services-card-design-category {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #11271bca;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .msc-agrotech-services-card-design-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 6px;
+        }
+
+        .msc-agrotech-services-card-design-meta {
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        .msc-agrotech-services-card-design-meta ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        .msc-agrotech-services-card-design-meta ul li {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        .msc-agrotech-services-card-design-highlight {
+            border: 2px solid #164117;
+            border-radius: 10px;
+            padding: 20px 15px;
+        }
+
+        .msc-agrotech-services-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #164117;
+        }
+    </style>
+</head>
+
+<body style="background: #f8f9fa;">
+    <section class="msc-agrotech-card-main-section mt-4">
+        <div class="container">
+            <h5 class="msc-agrotech-services-title">Empowering Modern Farming with Our Services</h5>
+            <div class="row">
+
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="msc-agrotech-services-card-design-card">
+                        <img src="../assets/img/ser4.jpg" alt="Climate Control">
+                        <div class="msc-agrotech-services-card-design-content">
+                            <div class="msc-agrotech-services-card-design-category">Greenhouse</div>
+                            <div class="msc-agrotech-services-card-design-title">Climate Control System Installation
+                            </div>
+                            <div class="msc-agrotech-services-card-design-meta">
+                                <p>Automated temperature and humidity  crop growth.</p>
+                                <ul>
+                                    <li>Remote monitoring options</li>
+                                    <li>Sensor-driven automation</li>
+                                    <li>Energy-efficient operations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="msc-agrotech-services-card-design-card">
+                        <img src="../assets/img/ser8.jpg" alt="Drip Irrigation">
+                        <div class="msc-agrotech-services-card-design-content">
+                            <div class="msc-agrotech-services-card-design-category">Irrigation</div>
+                            <div class="msc-agrotech-services-card-design-title">Drip & Misting Irrigation Setup</div>
+                            <div class="msc-agrotech-services-card-design-meta">
+                                <p>Efficient water delivery systems with minimal waste.</p>
+                                <ul>
+                                    <li>Customizable nozzles & emitters</li>
+                                    <li>Reduced water usage up to 60%</li>
+                                    <li>Automated scheduling available</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlighted Card -->
+                <div class="col-md-6">
+                    <div class="msc-agrotech-services-card-design-card msc-agrotech-services-card-design-highlight">
+                        <img src="../assets/img/ser7.jpg" alt="Polyhouse">
+                        <div class="msc-agrotech-services-card-design-content">
+                            <div class="msc-agrotech-services-card-design-category">Structure</div>
+                            <div class="msc-agrotech-services-card-design-title">Turnkey Polyhouse Construction</div>
+                            <div class="msc-agrotech-services-card-design-meta">
+                                <p>Customized polyhouses for diverse climates and crops.</p>
+                                <ul>
+                                    <li>UV-resistant poly film used</li>
+                                    <li>End-to-end execution</li>
+                                    <li>Smart layout planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6">
+                    <div class="msc-agrotech-services-card-design-card">
+                        <img src="../assets/img/work3.jpg" alt="Fertigation">
+                        <div class="msc-agrotech-services-card-design-content">
+                            <div class="msc-agrotech-services-card-design-category">Nutrients</div>
+                            <div class="msc-agrotech-services-card-design-title">Fertigation Systems & Scheduling</div>
+                            <div class="msc-agrotech-services-card-design-meta">
+                                <p>Accurate nutrient delivery via irrigation pipelines.</p>
+                                <ul>
+                                    <li>Custom nutrient formulations</li>
+                                    <li>Automated timing modules</li>
+                                    <li>Promotes uniform crop health</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-6">
+                    <div class="msc-agrotech-services-card-design-card">
+                        <img src="../assets/img/work6.avif" alt="Maintenance">
+                        <div class="msc-agrotech-services-card-design-content">
+                            <div class="msc-agrotech-services-card-design-category">Support</div>
+                            <div class="msc-agrotech-services-card-design-title">Annual Maintenance Contracts (AMC)
+                            </div>
+                            <div class="msc-agrotech-services-card-design-meta">
+                                <p>Keep your systems running with zero downtime.</p>
+                                <ul>
+                                    <li>Quarterly system health checks</li>
+                                    <li>24x7 technician support</li>
+                                    <li>Free minor repairs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-6">
+                    <div class="msc-agrotech-services-card-design-card">
+                        <img src="../assets/img/work1.jpg" alt="Consultation">
+                        <div class="msc-agrotech-services-card-design-content">
+                            <div class="msc-agrotech-services-card-design-category">Consulting</div>
+                            <div class="msc-agrotech-services-card-design-title">Polyhouse Crop Planning & Training
+                            </div>
+                            <div class="msc-agrotech-services-card-design-meta">
+                                <p>Expert guidance to help you grow the right way.</p>
+                                <ul>
+                                    <li>Crop selection advice</li>
+                                    <li>Yield-boosting strategies</li>
+                                    <li>Staff training workshops</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+     
+    <!-- servies -->
+    <section class="msc-agrotech-services-hero container ">
+        <div class="row align-items-stretch">
+            <!-- Left content -->
+            <div class="col-lg-7">
+                <div class="msc-left-agrotech-services">
+                    <p class="msc-agrotech-services-hero-subtitle">OUR SERVICES</p>
+                    <div class="msc-left-agrotech-services-hero">
+                        <h1 class="msc-agrotech-services-hero-title">Empowering Farmers Through Smart Polyhouse Farming
+                        </h1>
+                        <p class="msc-agrotech-services-hero-description">
+                            Experience modern agricultural practices with controlled climate polyhouse systems.
+                            From higher crop yield to resource-efficient production, we help you revolutionize your
+                            farming journey
+                            with technology-driven growth and sustainability.
+                        </p>
+                    </div>
+
+                    <!-- Progress Bars -->
+                    <div class="msc-agrotech-services-hero-progress">
+                        <p><strong>Yield Improvement under Polyhouse</strong> <span>85%</span></p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                        </div>
+
+                        <p><strong>Water & Nutrient Efficiency</strong> <span>70%</span></p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 70%"></div>
+                        </div>
+
+                        <p><strong>Year-Round Production</strong> <span>90%</span></p>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="msc-btn-agrotech">
+                        <button class="msc-agrotech-services-hero-btn btn btn-warning px-4 py-2 rounded-pill">Explore
+                            Services</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right image & card -->
+            <div class="col-lg-5 position-relative p-0">
+                <div class="msc-right-services-hero-section">
+                    <img src="../assets/img/serBg.jpg" alt="Polyhouse Farming">
+                    <div class="msc-agrotech-services-hero-card shadow p-4 rounded-4 bg-white">
+                        <div class="icon bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 50px; height: 50px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M214.2,319.991L214.2,319.991C197.34,301.585,232.293,180.319,27.075,97.569 
+                  c-33.75,6.125-71.688,176.672,127.719,228.844c59.609,29.797,50.219,79.469,50.219,107.078h38.344 
+                  c0,0-15.688-87.578,54.375-119.672c47.672-21.828,179.328-28.828,214.265-225.547
+                  C445.387,49.757,208.825,124.835,214.2,319.991z 
+                  M165.84,286.804c-4.063,2.813-9.641,1.797-12.453-2.266c-19.516-28.266-73.484-93.484-97.344-117.281 
+                  c-3.5-3.484-3.5-9.156,0-12.641c3.484-3.5,9.156-3.5,12.641,0c25.344,25.391,78.688,89.859,99.422,119.734 
+                  C170.918,278.413,169.903,283.991,165.84,286.804z 
+                  M415.965,141.663c-65.25,41.234-118.578,109.844-142.625,147.109 
+                  c-2.672,4.141-8.219,5.328-12.359,2.656c-4.141-2.688-5.328-8.219-2.641-12.375
+                  c25.141-38.766,79.141-108.766,148.047-152.5 
+                  c4.172-2.656,9.688-1.406,12.344,2.766C421.372,133.491,420.137,139.007,415.965,141.663z" />
+                            </svg>
+                        </div>
+
+                        <h5 class="msc-agrotech-services-hero-card-title">Transforming Agriculture with Polyhouse</h5>
+                        <p class="msc-agrotech-services-hero-card-text">
+                            Boost productivity with our cutting-edge polyhouse designs tailored for climate-resilient
+                            farming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- other serv -->
+    <section class="msc-services-section py-5">
+        <div class="container text-center">
+            <div class="msc-section-title mb-4">
+                <span class="msc-subtitle">Our Expertise</span>
+                <h2 class="msc-heading">Providing Modern Polyhouse Solutions for High-Yield Farming</h2>
+            </div>
+
+            <div class="row align-items-stretch">
+                <!-- Left services -->
+                <div class="col-lg-4 text-start d-flex flex-column justify-content-between">
+                    <div>
+                        <a href="/climate-control" class="text-decoration-none text-dark">
+                            <div class="msc-service-item d-flex align-items-center mb-4">
+                                <img src="../assets/img/ser1.jpg" class="msc-icon" alt="Climate Control" />
+                                <div>
+                                    <h5 class="msc-title">Climate-Controlled Farming</h5>
+                                    <p class="msc-description">Maximize yield with precision temperature and humidity
+                                        regulation.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/healthy-seedlings" class="text-decoration-none text-dark">
+                            <div class="msc-service-item d-flex align-items-center mb-4">
+                                <img src="../assets/img/ser2.jpg" class="msc-icon" alt="Seedlings" />
+                                <div>
+                                    <h5 class="msc-title">Healthy Seedling Supply</h5>
+                                    <p class="msc-description">Certified, disease-free seedlings for fast, healthy
+                                        growth in polyhouses.</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/training-support" class="text-decoration-none text-dark">
+                            <div class="msc-service-item d-flex align-items-center">
+                                <img src="../assets/img/ser3.jpg" class="msc-icon" alt="Training" />
+                                <div>
+                                    <h5 class="msc-title">Farmer Training & Support</h5>
+                                    <p class="msc-description">Expert training on polyhouse crop management and pest
+                                        control.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image center -->
+                <div class="col-lg-4 d-flex my-4 my-lg-0">
+                    <img src="../assets/img/serBg.jpg" class="full-height-img" alt="Polyhouse Expert" />
+                </div>
+
+                <!-- Right services -->
+                <div class="col-lg-4 text-start d-flex flex-column justify-content-between">
+                    <div>
+                        <a href="/polyhouse-construction" class="text-decoration-none text-dark">
+                            <div class="msc-service-item d-flex align-items-center mb-4">
+                                <div>
+                                    <h5 class="msc-title">Polyhouse Construction</h5>
+                                    <p class="msc-description">We build durable, high-efficiency polyhouse structures
+                                        tailored to your land.</p>
+                                </div>
+                                <img src="../assets/img/ser4.jpg" class="msc-icon" alt="Construction" />
+                            </div>
+                        </a>
+
+                        <a href="/drip-irrigation" class="text-decoration-none text-dark">
+                            <div class="msc-service-item d-flex align-items-center mb-4">
+                                <div>
+                                    <h5 class="msc-title">Drip Irrigation Systems</h5>
+                                    <p class="msc-description">Efficient water delivery systems for polyhouse crops,
+                                        reducing waste.</p>
+                                </div>
+                                <img src="../assets/img/ser5.jpg" class="msc-icon" alt="Irrigation" />
+                            </div>
+                        </a>
+
+                        <a href="/organic-advisory" class="text-decoration-none text-dark">
+                            <div class="msc-service-item d-flex align-items-center">
+                                <div>
+                                    <h5 class="msc-title">Organic Crop Advisory</h5>
+                                    <p class="msc-description">Get expert guidance on organic practices for polyhouse
+                                        vegetables & fruits.</p>
+                                </div>
+                                <img src="../assets/img/ser6.jpg" class="msc-icon" alt="Advisory" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
